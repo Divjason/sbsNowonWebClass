@@ -1,0 +1,52 @@
+float
+
+flex : 아직 레이아웃 요소가 정해지지 않은 상태에서 사용하기에 적합
+
+grid : 태생적으로 몇 행, 몇 열을 정의할지가 정해진 상태에서 사용하기에 적합
+
+<부모요소에 적용할 수 있는 grid 문법>
+
+1) 반드시 부모요소에 display:grid 값 적용
+
+2) grid-template-columns : 몇 개의 열을 생성할지 결정 *px // auto // fr
+
+3) grid-template-rows : 몇 개의 행을 생성할지 결정 *px // auto // fr
+
+4) grid : grid-template-rows / grid-template-columns
+
+5) grid-column-gap : 열과 열사이의 간격 제어
+grid-row-gap : 행과 행사이의 간격 제어
+
+6) grid-gap : grid-row-gap grid-column-gap
+
+7) justify-items : start // center // end => grid 내부의 아이템요소들을 왼쪽~오른쪽끝까지 수평정렬을 하고자 할 때
+
+8) align-items : start // center // end => grid 내부의 아이템요소들을 위~아래끝까지 수직정렬을 하고자 할 때
+
+9) justify-content : start // center // end => grid 내부의 아이템요소들을 하나의 content로 인식 => 수평정렬 하고자 할 때 // => 부모요소에서 열을 정의할 때, 반드시 auto 설정
+> space-between
+> space-around
+> space-evenly
+
+10) align-content : start // center // end => grid 내부의 아이템요소들을 하나의 content로 인식 => 수직정렬하고자 할 때
+> space-between
+> space-around
+> space-evenly
+
+<자식요소에 적용할 수 있는 grid 문법>
+1)
+justify-self : start // center // end // stretch
+align-self : start // center // end // stretch
+
+2) 
+grid-column-start: 1;
+grid-column-end: 3;
+> grid-column : 1 / 3
+> grid-column : 1 / span 2
+
+grid-row-start: 1;
+grid-row-end: 3;
+> grid-row : 1 / 3
+> grid-row : 1 / span 2
+
+grid-area : 1/2 / 5/6
